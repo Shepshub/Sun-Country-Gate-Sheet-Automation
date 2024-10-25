@@ -33,7 +33,7 @@ The data involved in this project consists of several key worksheets that hold r
      - Column M: Column used to correctly label whether each flight is an ORIG, TURN, or TERM.
      - Column N: Area for inputting notes or extra important information for each flight. e.g. "INOP APU", "PRIORITY", "LAV/WATER".
        
-![image](https://github.com/user-attachments/assets/4996e055-be6a-42f3-9729-8c1137caf622)
+![image](https://github.com/user-attachments/assets/99568d94-dd7f-4708-8450-e4c08c1fef77)
 
 2. **S&P**:
    - **Columns**:
