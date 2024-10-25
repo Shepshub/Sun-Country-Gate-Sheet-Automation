@@ -15,17 +15,32 @@ The data involved in this project consists of several key worksheets that hold r
 
 ### Worksheets
 
-2. **Today's Gate Sheet (1)**:
-   - **Columns**:
-     - Column B: Flight numbers for today's operations
-     - Column D: Gate assignment area where source values from the S&P sheet will be pasted
-     - Column N: Area for priority assignments, where "PRIORITY" will be noted
 
-1. **S&P**:
+1. **Today's Gate Sheet (1)**:
+   - **Columns**:
+     - Column A: Departure airport code for each flight.
+     - Column B: Flight numbers for today's operations.
+     - Column C: Unique aircraft number to identify which aircraft will be used for each flight.
+     - Column D: Gate assignment for each flight.
+     - Column E: Arrival airport code for each flight.
+     - Column F: # of passengers on each flight out of 186.
+     - Column G: Time of departure for each flight. Formatted as military time (hhmm).
+     - Column H: Time of arrival for each flight. Formatted as military time (hhmm).
+     - Column I: Column used to correctly label Charter flights as either "CARGO" flights or "FERRY" flights.
+     - Column J: Column used to input the actual departure time of flights leaving MSP and also used to input ETA times when inbound flights to MSP go airborne.
+     - Column K: Column used to input the actual arrival (block-in) time of flights arriving into MSP.
+     - Column L: # of passengers on each flight.
+     - Column M: Column used to correctly label whether each flight is an ORIG, TURN, or TERM.
+     - Column N: Area for inputting notes or extra important information for each flight. e.g. "INOP APU", "PRIORITY", "LAV/WATER".
+       
+![image](https://github.com/user-attachments/assets/4996e055-be6a-42f3-9729-8c1137caf622)
+
+2. **S&P**:
    - **Columns**:
      - Column C: Flight numbers (including multiple formats)
      - Column D: Corresponding source values related to the flights
      - Column I: Additional identifiers (typically 3 to 4-digit numbers) for priority management
+
 
 
 This structure allows for quick lookups and updates based on the flight identifiers, ensuring that all relevant data is interconnected for effective management.
