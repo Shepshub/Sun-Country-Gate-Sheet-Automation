@@ -124,7 +124,7 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
   - Clean Up:
      - After organizing the rows, it checks Column A and deletes any empty rows.
    
-- A breakdown of the Gate Sheet macros' key steps and logic can be downloaded here and the actual VBA code can be downloaded here.
+- A breakdown of the Gate Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded here.
 
 **Swap Sheet Macro (S&P)**:
 - **Sub xTAILSWAP()**: Identifies and transfers aircraft information between the Swap Sheet and the Gate Sheet based on matching flight numbers while also formatting the output with borders for clarity.
