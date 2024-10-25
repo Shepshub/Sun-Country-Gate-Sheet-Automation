@@ -170,7 +170,7 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
      - If column N already has a value, it appends " / PRIORITY" to the existing value.
      - If the cell is empty, it simply sets the value to "PRIORITY."
 
-- A breakdown of the Gate Plot macros' key steps and logic can be downloaded here and the actual VBA code can be downloaded here.
+- A breakdown of the Swap Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded here.
 
 **Gate Plot Macro**:
 
