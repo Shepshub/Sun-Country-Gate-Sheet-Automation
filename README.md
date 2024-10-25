@@ -37,11 +37,21 @@ The data involved in this project consists of several key worksheets that hold r
 
 2. **S&P**:
    - **Columns**:
+     - Column A: Unique aircraft number to identify which aircraft will be used for that flight.
+     - Column B: The "WILL OPERATE" column will visually help with which aircraft will operate which flight. No rules are run in this column.
      - Column C: Flight numbers (including multiple formats)
-     - Column D: Corresponding source values related to the flights
-     - Column I: Additional identifiers (typically 3 to 4-digit numbers) for priority management
+     - Column D: New gate value if that flight operates out of a new gate.
+     - Column I: Flight #'s that will have "PRIORITY" for that specific flight. 
 
 ![image](https://github.com/user-attachments/assets/40014ab6-ecdb-41c8-b7f1-32bcc623473a)
+
+**PLOT**:
+   - **Columns**: Contain flight gate data, shaded according to flight type, allowing quick identification of gate assignments and flight types.
+   - **Rows**: Contain time intervals starting from 5am out until 1am with 5 minute intervals inbetween each hour.
+   - **Purpose**: Serves as a visual representation of the gate sheet with color-coded data to indicate the types of flights departing from each gate.
+   - **Color Coding**:
+     - ORIG (origin flights), TURNS (turnaround flights), and TERMS (terminating flights) are visually distinguished to streamline gate management.
+  
 
 This structure allows for quick lookups and updates based on the flight identifiers, ensuring that all relevant data is interconnected for effective management.
 
