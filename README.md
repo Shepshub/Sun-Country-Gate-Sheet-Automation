@@ -6,7 +6,7 @@ Automation of an Excel-based document tracking critical flight information, incl
 This project aims to automate the management of gate assignments and related tasks for an airline's operational workflow. Previously, managing gate assignments, prioritizing flights, and handling swaps was a time-consuming and manual process that often led to errors and inefficiencies. This automation streamlines these processes by utilizing VBA macros in Excel to handle repetitive tasks efficiently, allowing for better time management and operational accuracy.
 
 The main goals of this project include:
-- Reducing the time spent on gate management tasks.
+- Reducing the time spent on gate sheet building and management tasks.
 - Minimizing errors associated with manual data entry and updates.
 - Enhancing the overall workflow of the operational staff by providing a user-friendly interface for data manipulation.
 
@@ -14,17 +14,19 @@ The main goals of this project include:
 The data involved in this project consists of several key worksheets that hold relevant information for gate management operations. Below is a brief overview of the data structure:
 
 ### Worksheets
-1. **S&P**:
-   - **Columns**:
-     - Column C: Flight numbers (including multiple formats)
-     - Column D: Corresponding source values related to the flights
-     - Column I: Additional identifiers (typically 3 to 4-digit numbers) for priority management
 
 2. **Today's Gate Sheet (1)**:
    - **Columns**:
      - Column B: Flight numbers for today's operations
      - Column D: Gate assignment area where source values from the S&P sheet will be pasted
      - Column N: Area for priority assignments, where "PRIORITY" will be noted
+
+1. **S&P**:
+   - **Columns**:
+     - Column C: Flight numbers (including multiple formats)
+     - Column D: Corresponding source values related to the flights
+     - Column I: Additional identifiers (typically 3 to 4-digit numbers) for priority management
+
 
 This structure allows for quick lookups and updates based on the flight identifiers, ensuring that all relevant data is interconnected for effective management.
 
