@@ -124,7 +124,8 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
   - Clean Up:
      - After organizing the rows, it checks Column A and deletes any empty rows.
    
-- A breakdown of the Gate Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Sheet%20Gate%20Macro.docx).
+- A powerpoint breakdown of the Gate Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Sheet%20Gate%20Macro.docx).
+- A demo video on how to use the Gate Sheet macro can be viewed [here](https://drive.google.com/file/d/1J36SXwEwJ_k68KOaRN1xk1t_bXjyBvG4/view?usp=drive_link).
 
 **Swap Sheet Macro (S&P)**:
 - **Sub xTAILSWAP()**: Identifies and transfers aircraft information between the Swap Sheet and the Gate Sheet based on matching flight numbers while also formatting the output with borders for clarity.
@@ -170,7 +171,8 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
      - If column N already has a value, it appends " / PRIORITY" to the existing value.
      - If the cell is empty, it simply sets the value to "PRIORITY."
 
-- A breakdown of the Swap Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20and%20Priority%20Sheet%20Macro.docx).
+- A powerpoint breakdown of the Swap Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20and%20Priority%20Sheet%20Macro.docx).
+- A demo video on how to use the Swap Sheet macro can be viewed [here](https://drive.google.com/file/d/1rBiw-O2IZo8goLTl7HjTiOuk5Uc_6wRy/view?usp=drive_link).
 
 **Gate Plot Macro**:
 
@@ -179,7 +181,8 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
 - Sub Plot3() subroutine handles the shading of the remaining outbound flights in the gate plot. These remaining flights originate from MSP. The macro locates the remaining green-filled cells with a 3 to 4-letter value and shades nine cells to the left with the same green color, signifying the amount of ground time given to fully load/board and push the flight out.
 - Sub Plot4() works similarly to the Sub Plot2() macro, although, instead of looking for TURN value flights, it searches for TERM value flights, signifying that the flight will terminate to the hangar and not turn back out. It extracts the airport code, flight number, and gate assignment from the gate sheet and populates the correct cells in the gate plot. Then, shading nine cells to the right of the arrival time signifying the time needed to fully deplane, unload bags, and get the aircraft off of the gate.
 
-- A breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/blob/main/Gate%20Plot%20Macro.docx).
+- A powerpoint breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/blob/main/Gate%20Plot%20Macro.docx).
+- A demo video on how to use the Gate Plot macro can be viewed [here](https://drive.google.com/file/d/1y6AU7GrpoWOAUvuk7VYGMusH5IDccW2N/view?usp=drive_link). Also a video on how to display inbound ETA's effectively can be viewed [here](https://drive.google.com/file/d/1pwc2dn-Yz74o74bhURSSjouanFo09Ewe/view?usp=drive_link).
 
 ### Key Features
 - **Gate Change Management**: Automates the process of changing gate assignments by looking up flight identifiers and updating the corresponding gate information seamlessly.
