@@ -179,7 +179,7 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
 - Sub Plot3() subroutine handles the shading of the remaining outbound flights in the gate plot. These remaining flights originate from MSP. The macro locates the remaining green-filled cells with a 3 to 4-letter value and shades nine cells to the left with the same green color, signifying the amount of ground time given to fully load/board and push the flight out.
 - Sub Plot4() works similarly to the Sub Plot2() macro, although, instead of looking for TURN value flights, it searches for TERM value flights, signifying that the flight will terminate to the hangar and not turn back out. It extracts the airport code, flight number, and gate assignment from the gate sheet and populates the correct cells in the gate plot. Then, shading nine cells to the right of the arrival time signifying the time needed to fully deplane, unload bags, and get the aircraft off of the gate.
 
-- A breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded here.
+- A breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/blob/main/Gate%20Plot%20Macro.docx).
 
 ### Key Features
 - **Gate Change Management**: Automates the process of changing gate assignments by looking up flight identifiers and updating the corresponding gate information seamlessly.
