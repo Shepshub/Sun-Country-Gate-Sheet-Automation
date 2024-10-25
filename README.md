@@ -35,7 +35,7 @@ The data involved in this project consists of several key worksheets that hold r
 ![image](https://github.com/user-attachments/assets/99568d94-dd7f-4708-8450-e4c08c1fef77)
 
 
-2. **SWAP SHEET (S&P)**:
+2. **Swap Sheet (S&P)**:
    - **Columns**:
      - Column A: Unique aircraft number to identify which aircraft will be used for that flight.
      - Column B: The "WILL OPERATE" column will visually help with which aircraft will operate which flight. No rules are run in this column.
@@ -46,7 +46,7 @@ The data involved in this project consists of several key worksheets that hold r
 ![image](https://github.com/user-attachments/assets/40014ab6-ecdb-41c8-b7f1-32bcc623473a)
 
 
-**GATE PLOT**:
+**Gate Plot**:
    - **Columns**: Contain flight gate data, shaded according to flight type, allowing quick identification of gate assignments and flight types.
    - **Rows**: Contain time intervals starting at 5 a.m. and ending at 1 a.m., with 5-minute intervals between each hour.
    - **Purpose**: A visual representation of the gate sheet with color-coded data to indicate the types of flights departing from each gate.
