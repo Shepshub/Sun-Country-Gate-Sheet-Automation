@@ -41,7 +41,7 @@ The data involved in this project consists of several key worksheets that hold r
      - Column D: Corresponding source values related to the flights
      - Column I: Additional identifiers (typically 3 to 4-digit numbers) for priority management
 
-
+![image](https://github.com/user-attachments/assets/40014ab6-ecdb-41c8-b7f1-32bcc623473a)
 
 This structure allows for quick lookups and updates based on the flight identifiers, ensuring that all relevant data is interconnected for effective management.
 
