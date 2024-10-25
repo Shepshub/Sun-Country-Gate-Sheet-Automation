@@ -1,11 +1,10 @@
-# Project Title: Gate Management Automation
-Automation of an Excel-based document tracking critical flight information, including flight numbers, departure/arrival airports, scheduled times (STD/STA), passenger numbers, and special requirements
-
+# Gate Sheet Management Automation
+Automation of Excel-based documents tracking critical flight information, including flight numbers, departure/arrival airports, scheduled times (STD/STA), passenger numbers, and special requirements.
 
 ## Background and Overview
 This project aims to automate the management of gate assignments and related tasks for an airline's operational workflow. Previously, managing gate assignments, prioritizing flights, and handling swaps was a time-consuming and manual process that often led to errors and inefficiencies. This automation streamlines these processes by utilizing VBA macros in Excel to handle repetitive tasks efficiently, allowing for better time management and operational accuracy.
 
-The main goals of this project include:
+**The main goals of this project include:**
 - Reducing the time spent on gate sheet building and management tasks.
 - Minimizing errors associated with manual data entry and updates.
 - Enhancing the overall workflow of the operational staff by providing a user-friendly interface for data manipulation.
@@ -185,8 +184,8 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
 - A demo video on how to use the Gate Plot macro can be viewed [here](https://drive.google.com/file/d/1y6AU7GrpoWOAUvuk7VYGMusH5IDccW2N/view?usp=drive_link). Also a video on how to display inbound ETA's effectively can be viewed [here](https://drive.google.com/file/d/1pwc2dn-Yz74o74bhURSSjouanFo09Ewe/view?usp=drive_link).
 
 ### Key Features
-- **Gate Change Management**: Automates the process of changing gate assignments by looking up flight identifiers and updating the corresponding gate information seamlessly.
-- **Priority Assignment**: Allows users to add "PRIORITY" tags to specific flights easily, ensuring that critical operations are highlighted and addressed promptly.
+- **Gate Sheet Building and Management**: Automates the process of building gate sheets and changing aircraft routes and gate assignments assignments by looking up flight identifiers and updating the corresponding aircraft and gate information seamlessly.
+- **Priority Assignment**: Allows users to add "PRIORITY" tags to specific flights easily, ensuring that time critical operations are highlighted and addressed promptly.
 - **User-Friendly Interface**: The macro prompts users for confirmation before executing actions, making it easier for operational staff to interact with the tool and confidently implement changes.
 
 ### Impact
