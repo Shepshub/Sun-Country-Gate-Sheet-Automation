@@ -14,7 +14,6 @@ The data involved in this project consists of several key worksheets that hold r
 
 ### Worksheets
 
-
 1. **Gate Sheet (1)**:
    - **Columns**:
      - Column A: Departure airport code for each flight.
@@ -175,10 +174,10 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
 
 **Gate Plot Macro**:
 
-- Sub Plot1() visualizes and plots flight gate information based on time intervals and gate numbers. The key idea is to match flight times to specific time slots on the gate plot, ensure proper spacing based on gate usage, and include additional flight information (like destination and aircraft type) in the appropriate places.
-- Sub Plot2() macro fills in cells in the gate plot worksheet based on inbound flight data from the gate sheet. It finds flights marked with "TURN," rounds the arrival time if needed to the nearest 5 minutes, finds the appropriate gate, and shades cells purple. It also fills and transfers specific gate information like airport codes and flight numbers into the purple-marked cells.
-- Sub Plot3() subroutine handles the shading of the remaining outbound flights in the gate plot. These remaining flights originate from MSP. The macro locates the remaining green-filled cells with a 3 to 4-letter value and shades nine cells to the left with the same green color, signifying the amount of ground time given to fully load/board and push the flight out.
-- Sub Plot4() works similarly to the Sub Plot2() macro, although, instead of looking for TURN value flights, it searches for TERM value flights, signifying that the flight will terminate to the hangar and not turn back out. It extracts the airport code, flight number, and gate assignment from the gate sheet and populates the correct cells in the gate plot. Then, shading nine cells to the right of the arrival time signifying the time needed to fully deplane, unload bags, and get the aircraft off of the gate.
+- **Sub Plot1()** visualizes and plots flight gate information based on time intervals and gate numbers. The key idea is to match flight times to specific time slots on the gate plot, ensure proper spacing based on gate usage, and include additional flight information (like destination and aircraft type) in the appropriate places.
+- **Sub Plot2()** macro fills in cells in the gate plot worksheet based on inbound flight data from the gate sheet. It finds flights marked with "TURN," rounds the arrival time if needed to the nearest 5 minutes, finds the appropriate gate, and shades cells purple. It also fills and transfers specific gate information like airport codes and flight numbers into the purple-marked cells.
+- **Sub Plot3()** subroutine handles the shading of the remaining outbound flights in the gate plot. These remaining flights originate from MSP. The macro locates the remaining green-filled cells with a 3 to 4-letter value and shades nine cells to the left with the same green color, signifying the amount of ground time given to fully load/board and push the flight out.
+- **Sub Plot4()** works similarly to the Sub Plot2() macro, although, instead of looking for TURN value flights, it searches for TERM value flights, signifying that the flight will terminate to the hangar and not turn back out. It extracts the airport code, flight number, and gate assignment from the gate sheet and populates the correct cells in the gate plot. Then, shading nine cells to the right of the arrival time signifying the time needed to fully deplane, unload bags, and get the aircraft off of the gate.
 
 - A powerpoint breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/blob/main/Gate%20Plot%20Macro.docx).
 - A demo video on how to use the Gate Plot macro can be viewed [here](https://drive.google.com/file/d/1y6AU7GrpoWOAUvuk7VYGMusH5IDccW2N/view?usp=drive_link). Also a video on how to display inbound ETA's effectively can be viewed [here](https://drive.google.com/file/d/1pwc2dn-Yz74o74bhURSSjouanFo09Ewe/view?usp=drive_link).
