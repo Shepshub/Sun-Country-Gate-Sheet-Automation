@@ -2,10 +2,10 @@
 Automation of Excel-based documents tracking critical flight information, including flight numbers, departure/arrival airports, scheduled times (STD/STA), passenger numbers, and special requirements.
 
 ## Background and Overview
-This project aims to automate the management of gate assignments and related tasks for an airline's operational workflow. Previously, managing gate assignments, prioritizing flights, and handling swaps was a time-consuming and manual process that often led to errors and inefficiencies. This automation streamlines these processes by utilizing VBA macros in Excel to handle repetitive tasks efficiently, allowing for better time management and operational accuracy.
+This project aims to automate the building and management of the Gate Sheet and related tasks for Sun Country's operational workflow. Previously, building and managing the Gate Sheet and the Gate Plot, along with handling swaps and priority flights, was a time-consuming and manual process that often led to errors and inefficiencies. This automation streamlines these processes by utilizing VBA macros in Excel to handle repetitive tasks efficiently, allowing for better time management and operational accuracy.
 
 **The main goals of this project include:**
-- Reducing the time spent on gate sheet building and management tasks.
+- Reducing the time spent on Gate Sheet and Gate Plot building and management tasks.
 - Minimizing errors associated with manual data entry and updates.
 - Enhancing the overall workflow of the operational staff by providing a user-friendly interface for data manipulation.
 
@@ -45,7 +45,7 @@ The data involved in this project consists of several key worksheets that hold r
 ![image](https://github.com/user-attachments/assets/40014ab6-ecdb-41c8-b7f1-32bcc623473a)
 
 
-**Gate Plot**:
+3. **Gate Plot**:
    - **Columns**: Contain flight gate data, shaded according to flight type, allowing quick identification of gate assignments and flight types.
    - **Rows**: Contain time intervals starting at 5 a.m. and ending at 1 a.m., with 5-minute intervals between each hour.
    - **Purpose**: A visual representation of the gate sheet with color-coded data to indicate the types of flights departing from each gate.
@@ -58,7 +58,9 @@ The data involved in this project consists of several key worksheets that hold r
 This structure allows for quick lookups and updates based on the flight identifiers, ensuring that all relevant data is interconnected for effective management.
 
 ## Executive Summary
-The Gate Management Automation project leverages Excel VBA macros to enhance the efficiency of gate management operations within an airline setting. By automating the processes of gate assignment updates, priority management, and swap handling, this project reduces manual labor and the potential for human error.
+The Gate Management Automation project leverages Excel VBA macros to enhance the efficiency of Gate Sheet operation within the Airport Coordination Center. By automating the processes of gate assignment updates, priority management, and swap handling, this project reduces manual labor and the potential for human error.
+
+![image](https://github.com/user-attachments/assets/7d509bdc-3d5d-4e48-93fe-e81f3a2fb470)
 
 **Gate Sheet Macro**:
 - **Sub gatesheet1()**: This macro cleans up and formats the gate sheet data:
@@ -68,13 +70,13 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
      - Border Styling: Adds thin black borders to all edges and inside lines of the data range from columns A to N, starting from row 3 down to the last used row.
      - Time Format: Sets columns G and H to display in "HHMM" time format.
      - Deleting Extra Columns: Deletes columns O to Q up to row 300.
-     - Fill Color in Column N: Fills cells in column N with white background color from row 3 to the last row with data.
+     - Fill Color in Column N: Fills cells in column N with a white background color from row 3 to the last row with data.
        
 - **Sub gatesheet2()**: Continues with formatting the gate sheet along with inputting specific flight information:
   - PAX Count Formatting:
      - Cleans up values in column F by removing "0/" prefixes, formats the column as text, copies its values to column L, and appends "/186" to each non-empty cell in column F.
   - Data Formatting and Styling:
-     - Adds borders around the data range in columns A to N.
+     - Borders around the data range are added in columns A to N.
      - Sets the font style in columns G and H to Calibri, size 20, bold.
      - Formats columns G and H to "HHMM" time format, then deletes columns O to Q.
   - Adding Customs Information:
@@ -86,13 +88,13 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
   - Remove Letters in Column C: Strips "N" and "A" from values in column C.
     
 - **Sub gatesheet3()**: This macro handles the cutting and moving of each outbound flight whose tail value matches an inbound flight. This signifies that the outbound flight will turn off the inbound aircraft.
-  - Set Up:
+  - Set-Up:
      - Identifies the worksheet and the last row in column C.
      - Initializes a collection to hold rows that need moving.
   - Match and Move Rows:
      - Iterates backward through column C, looking for rows with a white fill color.
      - When a white-filled row is found, the macro searches above it for a row with the same value in column C but with a different fill color.
-     - If a match is found, it moves the white-filled row directly below the matched row, ensuring the rows with the same value are grouped together.
+     - If a match is found, the white-filled row is moved directly below the matched row, ensuring the rows with the same value are grouped together.
   - Cleanup:
      - Deletes rows with empty values in column A to tidy up the data.
   - Finalization:
@@ -107,9 +109,9 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
      - It checks cells with a white background fill.
      - If the cell’s value differs from the above row, "ORIG" is inserted into Column M.
   - Purpose:
-     - TURN: Likely indicates a turnaround flight (same flight number or aircraft returns quickly).
-     - TERM: Could signify the termination of a flight or a change in aircraft.
-     - ORIG: Marks the origin point or starting flight in a sequence.
+     - TURN: Indicates a turnaround flight (same flight number or aircraft returns quickly).
+     - TERM: Signifies the termination of an aircraft after it has been fully unloaded and deplaned.
+     - ORIG: Indicates that this flight will originate from the station. The aircraft used for the flight will be brought from the hanger.
    
 - **Sub gatesheet5()**: Organizes flight rows based on morning flight times (found in Column G) and adjusts the order of flights that have an ORIG status (with a white fill in Column C).
   - Loop to Identify Rows with White Fill in Column C:
@@ -118,12 +120,13 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
      - It searches upwards through Column G to find the next available white-fill cell with a smaller flight time.
   - Move Row:
      - Once it finds a suitable row with a smaller flight time, it moves the current row below it.
-     - The Cut operation is used to shift the row into the correct position.
+     - The Cut operation shifts the row into the correct position.
   - Clean Up:
      - After organizing the rows, it checks Column A and deletes any empty rows.
    
-- A powerpoint breakdown of the Gate Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Sheet%20Gate%20Macro.docx).
-- A demo video on how to use the Gate Sheet macro can be viewed [here](https://drive.google.com/file/d/1J36SXwEwJ_k68KOaRN1xk1t_bXjyBvG4/view?usp=drive_link).
+A PowerPoint breakdown of the Gate Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Sheet%20Macro%20Final.pptx), and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Sheet%20Gate%20Macro.docx).
+
+A demo video on how to use the Gate Sheet macro can be viewed [here](https://drive.google.com/file/d/1J36SXwEwJ_k68KOaRN1xk1t_bXjyBvG4/view?usp=drive_link).
 
 **Swap Sheet Macro (S&P)**:
 - **Sub xTAILSWAP()**: Identifies and transfers aircraft information between the Swap Sheet and the Gate Sheet based on matching flight numbers while also formatting the output with borders for clarity.
@@ -169,22 +172,28 @@ The Gate Management Automation project leverages Excel VBA macros to enhance the
      - If column N already has a value, it appends " / PRIORITY" to the existing value.
      - If the cell is empty, it simply sets the value to "PRIORITY."
 
-- A powerpoint breakdown of the Swap Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20and%20Priority%20Sheet%20Macro.docx).
-- A demo video on how to use the Swap Sheet macro can be viewed [here](https://drive.google.com/file/d/1rBiw-O2IZo8goLTl7HjTiOuk5Uc_6wRy/view?usp=drive_link).
+A PowerPoint breakdown of the Swap Sheet macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20Sheet%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Swap%20and%20Priority%20Sheet%20Macro.docx).
+
+A demo video on how to use the Swap Sheet macro can be viewed [here](https://drive.google.com/file/d/1rBiw-O2IZo8goLTl7HjTiOuk5Uc_6wRy/view?usp=drive_link).
 
 **Gate Plot Macro**:
 
 - **Sub Plot1()** visualizes and plots flight gate information based on time intervals and gate numbers. The key idea is to match flight times to specific time slots on the gate plot, ensure proper spacing based on gate usage, and include additional flight information (like destination and aircraft type) in the appropriate places.
+  
 - **Sub Plot2()** macro fills in cells in the gate plot worksheet based on inbound flight data from the gate sheet. It finds flights marked with "TURN," rounds the arrival time if needed to the nearest 5 minutes, finds the appropriate gate, and shades cells purple. It also fills and transfers specific gate information like airport codes and flight numbers into the purple-marked cells.
+
 - **Sub Plot3()** subroutine handles the shading of the remaining outbound flights in the gate plot. These remaining flights originate from MSP. The macro locates the remaining green-filled cells with a 3 to 4-letter value and shades nine cells to the left with the same green color, signifying the amount of ground time given to fully load/board and push the flight out.
+
 - **Sub Plot4()** works similarly to the Sub Plot2() macro, although, instead of looking for TURN value flights, it searches for TERM value flights, signifying that the flight will terminate to the hangar and not turn back out. It extracts the airport code, flight number, and gate assignment from the gate sheet and populates the correct cells in the gate plot. Then, shading nine cells to the right of the arrival time signifying the time needed to fully deplane, unload bags, and get the aircraft off of the gate.
 
-- A powerpoint breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/blob/main/Gate%20Plot%20Macro.docx).
-- A demo video on how to use the Gate Plot macro can be viewed [here](https://drive.google.com/file/d/1y6AU7GrpoWOAUvuk7VYGMusH5IDccW2N/view?usp=drive_link). Also a video on how to display inbound ETA's effectively can be viewed [here](https://drive.google.com/file/d/1pwc2dn-Yz74o74bhURSSjouanFo09Ewe/view?usp=drive_link).
+A PowerPoint breakdown of the Gate Plot macros' key steps and logic can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/raw/refs/heads/main/Gate%20Plot%20Macro%20Final.pptx) and the actual VBA code can be downloaded [here](https://github.com/Shepshub/Aviation-Gate-Sheet-Automation/blob/main/Gate%20Plot%20Macro.docx).
+
+A demo video on how to use the Gate Plot macro can be viewed [here](https://drive.google.com/file/d/1y6AU7GrpoWOAUvuk7VYGMusH5IDccW2N/view?usp=drive_link). Also, a video on how to display inbound ETA's effectively can be viewed [here](https://drive.google.com/file/d/1pwc2dn-Yz74o74bhURSSjouanFo09Ewe/view?usp=drive_link).
 
 ### Key Features
-- **Gate Sheet Building and Management**: Automates the process of building gate sheets and changing aircraft routes and gate assignments assignments by looking up flight identifiers and updating the corresponding aircraft and gate information seamlessly.
-- **Priority Assignment**: Allows users to add "PRIORITY" tags to specific flights easily, ensuring that time critical operations are highlighted and addressed promptly.
+- **Gate Sheet Building and Tail Swap Management**: Automates the process of building gate sheets and changing aircraft routes and gate assignments by looking up flight identifiers and seamlessly updating the corresponding aircraft and gate information.
+- **Gate Plot Building and Management**: Automates the process of building the Gate Plot, which is the visual representation of the Gate Sheet.
+- **Priority Assignment**: This feature allows users to easily add "PRIORITY" tags to specific flights, ensuring that time-critical operations are highlighted and addressed promptly.
 - **User-Friendly Interface**: The macro prompts users for confirmation before executing actions, making it easier for operational staff to interact with the tool and confidently implement changes.
 
 ### Impact
